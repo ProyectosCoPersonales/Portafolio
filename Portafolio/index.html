@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/javascript.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1 id="h1-element">Hi, me llamo Jordan 😁</h1>
+        <div class="photo-container">
+            <img src="perfil.png" alt="Foto de perfil" class="photo">
+        </div>
+        
+        <div class="sub-read">
+            <h2>
+                Primero que nada, no soy un robot; soy un desarrollador fullstack junior 
+                especializado en Java. Amo tanto el lenguaje como su framework Spring.
+            </h2>
+        </div>
+        
+    </header>
+    <nav>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#educacion">Educación</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <p class="quote">"La simplicidad es la máxima sofisticación" - Leonardo da Vinci</p>
+        
+        <section id="sobre-mi" class="section">
+            <h2>Sobre Mí</h2>
+            <p>
+                Encantado de conocerte. Aunque comencé con Java desarrollando aplicaciones 
+                de escritorio, fue a través de Spring que descubrí las herramientas necesarias 
+                para interactuar con la web y explorar el vasto mundo tanto del frontend como 
+                del backend. Soy consciente de que el camino por recorrer es largo, pero lo que 
+                más disfruto es crear y perfeccionar el dominio de estas tecnologías.
+            </p>
+        </section>
+
+        <section id="educacion" class="section">
+            <h2>Educación</h2>
+            <ul>
+                <li>Academia Naval Almirante Illingworth (2020)</li>
+                <li>Universidad de Guayaquil (2021 - Pausado en 2022)</li>
+                <li>Instituto Tecnológico Argos (2022 - 2024)</li>
+            </ul>
+        </section>
+
+        <section id="experiencia" class="section">
+            <h2>Experiencia</h2>
+            <ul>
+                <li>Aunque no tengo experiencia laboral formal, he adquirido un 
+                    sólido manejo de estas tecnologías. Sin embargo, aún no he 
+                    tenido la oportunidad de trabajar en una empresa o proyecto 
+                    profesional.
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div class="skills">
+                    <div class="skills">
+                        <!-- HTML -->
+                        <div class="skill" data-skill="html" title="HTML">
+                            <i class="fab fa-html5" aria-hidden="true"></i>
+                            <span class="sr-only">HTML</span>
+                        </div>
+                    
+                        <!-- CSS -->
+                        <div class="skill" data-skill="css" title="CSS">
+                            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                            <span class="sr-only">CSS</span>
+                        </div>
+                    
+                        <!-- JavaScript -->
+                        <div class="skill" data-skill="js" title="JavaScript">
+                            <i class="fab fa-js" aria-hidden="true"></i>
+                            <span class="sr-only">JavaScript</span>
+                        </div>
+                    
+                        <!-- PostgreSQL -->
+                        <div class="skill" data-skill="postgresql" title="PostgreSQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon" class="db-icon">
+                            <span class="sr-only">PostgreSQL</span>
+                        </div>
+                    
+                        <!-- SQLite -->
+                        <div class="skill" data-skill="sqlite" title="SQLite">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite Icon" class="db-icon">
+                            <span class="sr-only">SQLite</span>
+                        </div>
+                    
+                        <!-- MySQL -->
+                        <div class="skill" data-skill="mysql" title="MySQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Icon" class="db-icon">
+                            <span class="sr-only">MySQL</span>
+                        </div>
+                    
+                        <!-- Java -->
+                        <div class="skill" data-skill="java" title="Java">
+                            <i class="fab fa-java" aria-hidden="true"></i>
+                            <span class="sr-only">Java</span>
+                        </div>
+                    
+                        <!-- Java Swing -->
+                        <div class="skill" data-skill="java-swing" title="Java Swing">
+                            <i class="fas fa-window-maximize" aria-hidden="true"></i>
+                            <span class="sr-only">Java Swing</span>
+                        </div>
+                    
+                        <!-- Spring -->
+                        <div class="skill" data-skill="spring" title="Spring">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Icon" class="db-icon">
+                            <span class="sr-only">Spring</span>
+                        </div>
+                    </div>
+                    
+                
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <h2>Mis Proyectos</h2>
+            <div class="projects">
+                <div class="project" data-tags="html,css,js,spring,postgresql">
+                    <img src="/proy1.png" alt="Captura de pantalla del Proyecto 1">
+                    <h3>Proyecto 1: Sistema de reservación de un cine</h3>
+                    <p>Este es un proyecto propuesto por Roadmap para desarrollo en el lado del backend y frontend</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Spring</span>
+                    </div>
+                    <a href="https://github.com/ProyectosCoPersonales/Movie-Reservation-System-Solutions" target="_blank" class="github-link">Ver en GitHub</a>
+                </div>
+            
+                <div class="project" data-tags="java,java-swing,sqlite">
+                    <img src="/Proyecto3.png" alt="Captura de pantalla del Proyecto 2">
+                    <h3>Proyecto 2: Aplicación de escritorio para administrar nuestros gastos</h3>
+                    <p>Esta aplicación desarrollada es un CRUD para los gastos hecha en Java Swing</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Java Swing</span>
+                    </div>
+                    <a href="https://github.com/ProyectosCoPersonales/GastoTracker" target="_blank" class="github-link">Ver en GitHub</a>
+                </div>
+            
+                <div class="project" data-tags="html,css,js">
+                    <img src="/Proyecto1.png" alt="Captura de pantalla del Proyecto 3">
+                    <h3>Proyecto 3: Simulador del espectro electromagnetico</h3>
+                    <p>Este es un simulador para visualizar las ondas en el espectro electromagnetico.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JS</span>
+                    </div>
+                    <a href="https://github.com/ProyectosCoPersonales/Simulador-del-Espectro-de-Electromagn-tico" target="_blank" class="github-link">Ver en GitHub</a>
+                </div>
+            
+                <div class="project" data-tags="java,java-swing,sqlite">
+                    <img src="/image.png" alt="Captura de pantalla del Proyecto 4">
+                    <h3>Proyecto 4: CRUD de películas</h3>
+                    <p>Una aplicación de escritorio hecha con Java Swing para CRUD de las películas</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Java Swing</span>
+                    </div>
+                    <a href="https://github.com/ProyectosCoPersonales/Administrador-de-Pel-culas" target="_blank" class="github-link">Ver en GitHub</a>
+                </div>
+            
+                <div class="project" data-tags="spring,java,mysql,postgresql">
+                    <img src="/ecommerceECOM.png" alt="Captura de pantalla del Proyecto 5">
+                    <h3>Proyecto 5: API Ecommerce</h3>
+                    <p>Esta es una API para poder administrar las compras en un Ecommerce.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Java Spring</span>
+                    </div>
+                    <a href="https://github.com/ProyectosCoPersonales/API-E-Commerce-" target="_blank" class="github-link">Ver en GitHub</a>
+                </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <footer id="contacto">
+        <p>Contacto: prograllumitaxi@outlook.com | Teléfono: (+593) 098-139-0440</p>
+        <p>
+            <a href="https://www.linkedin.com/in/jordan-llumitaxi-gonz%C3%A1lez-a06398326/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+            </a>
+            <a href="https://github.com/ProyectosCoPersonales" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+            </a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

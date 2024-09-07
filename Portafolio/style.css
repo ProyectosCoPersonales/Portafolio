@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --text-color: #ffffff;
+  --text-color-secondary: #b0b0b0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px; 
+  margin: auto;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-color: var(--surface-color);
+  }
+  50% {
+    background-color: #bb86fc;
+  }
+  100% {
+    background-color: var(--surface-color);
+  }
+}
+
+header {
+  background: var(--surface-color);
+  color: var(--text-color);
+  text-align: left;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+header h1 {
+ 
+  position: absolute;
+  font-size: 60px;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  margin-left: 35px;
+  top: 0; /* Start at the top */
+}
+
+.sub-read {
+  position: relative;
+  padding: 20px; 
+  margin-top: 250px;
+  margin-left: 15px;
+  max-width: 800px; 
+}
+.sub-read h2 {
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-container {
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%; 
+  overflow:visible;
+  display: flex;
+  position: absolute;
+  right: 150px; 
+  bottom: 100px; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.fab fa-linkedin{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.fab fa-github{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.photo {
+  height: auto;
+  width: 300%;
+  position: relative;
+  object-fit: cover;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(190px);
+  }
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.section {
+  margin-bottom: 3rem;
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.quote {
+  font-family: "Dancing Script";
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color-secondary);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.5s;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  border: 1px solid var(--primary-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.skill:hover,
+.skill.active {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  opacity: 1;
+}
+
+.project.hidden {
+  display: none;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-tag {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+footer {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--text-color);
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .skill {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #555;
+}
+
